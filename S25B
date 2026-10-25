@@ -1,0 +1,4 @@
+import pandas as pd
+df = pd.DataFrame({'Price': [12, 45, 67, 89, 23, 56, 78, 90, 34, 100]})
+df['Category'] = pd.cut(df['Price'], bins=3, labels=['Low', 'Medium', 'High'])
+print(df)
