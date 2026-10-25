@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.DataFrame({'Roll No': [1, 2, 3, 4, 5], 'Name': ['A', 'B', 'C', 'D', 'E'], 'Percentage': [85.5, 90.0, 85.5, 78.0, 92.5]})
+print("Mean Percentage:", round(df['Percentage'].mean(), 2))
+print("Median Percentage:", df['Percentage'].median())
+print("Mode Percentage:", df['Percentage'].mode()[0])
