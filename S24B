@@ -1,0 +1,7 @@
+import pandas as pd
+df = pd.DataFrame({'Marks': [35, 55, 72, 88, 95, 42, 68]})
+print("Before Discretization:\n", df)
+bins = [0, 40, 60, 80, 100]
+labels = ['Poor', 'Average', 'Good', 'Excellent']
+df['Performance'] = pd.cut(df['Marks'], bins=bins, labels=labels)
+print("\nAfter Discretization:\n", df)
