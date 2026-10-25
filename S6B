@@ -1,0 +1,5 @@
+import pandas as pd
+df = pd.DataFrame({'Name': ['Smaran', 'Sachin', 'Samarpan', 'Spandan', 'Shaman'], 'Address': ['Pune', 'Mumbai', 'Delhi', 'Chennai', 'Madurai'], 'Age': [20, 23, 19, 21, 22], 'Class': ['ME', 'MSc (CA)', 'MVOC', 'MCom', 'MSc']})
+print("Statistical Description:\n", df.describe(include='all'))
+print("\nShape of dataset:", df.shape)
+print("\nFirst two rows:\n", df.head(2))
