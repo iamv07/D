@@ -1,0 +1,6 @@
+import pandas as pd
+df = pd.DataFrame({'Salary': [30, 45, 50, 60, 70, 80, 90, 100]})
+salary = df['Salary']
+stats_data = {'Mean': salary.mean(), 'Median': salary.median(), 'Variance': salary.var(), 'Std Dev': salary.std(), 'Min': salary.min(), 'Max': salary.max(), 'Q1 (25%)': salary.quantile(0.25), 'Q2 (50%)': salary.quantile(0.50), 'Q3 (75%)': salary.quantile(0.75), 'Count': salary.count()}
+for k, v in stats_data.items():
+    print(f"{k}: {v}")
