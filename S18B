@@ -1,0 +1,11 @@
+import pandas as pd
+import numpy as np
+df = pd.DataFrame({'X': [2, 6, 8, 10], 'Y': [3, 9, 12, 15]})
+p1 = df.iloc[0].values
+p2 = df.iloc[1].values
+diff = p2 - p1
+euclidean = np.linalg.norm(diff)
+manhattan = np.sum(np.abs(diff))
+print(f"Difference Vector: {diff}")
+print(f"Euclidean Distance: {euclidean:.4f}")
+print(f"Manhattan Distance: {manhattan}")
