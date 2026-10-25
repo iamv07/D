@@ -1,0 +1,9 @@
+import pandas as pd
+from sklearn.preprocessing import LabelEncoder
+df = pd.DataFrame({'Student_name': ['A', 'B', 'C', 'D'], 'City': ['Pune', 'Mumbai', 'Pune', 'Delhi'], 'Age': [20, None, 22, 21], 'Fees': [50000, 60000, None, 55000], 'Admitted': ['Yes', 'No', 'Yes', 'No']})
+df['Age'] = df['Age'].fillna(df['Age'].mean())
+df['Fees'] = df['Fees'].fillna(df['Fees'].mean())
+df = pd.get_dummies(df, columns=['City'])
+le = LabelEncoder()
+df['Admitted'] = le.fit_transform(df['Admitted'])
+print(df)
